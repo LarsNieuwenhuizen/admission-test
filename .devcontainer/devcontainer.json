@@ -1,0 +1,34 @@
+{
+  "name": "Admission webhook server",
+  "image": "mcr.microsoft.com/devcontainers/go:1.23-bookworm",
+  "features": {
+    "ghcr.io/rio/features/chezmoi:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/larsnieuwenhuizen/features/jqyq:latest": {},
+    "ghcr.io/larsnieuwenhuizen/features/zellij:0": {},
+    "ghcr.io/devcontainers-contrib/features/typescript:2": {}
+  },
+  "postCreateCommand": ".devcontainer/init.sh",
+  "updateRemoteUserUID": true,
+  "customizations": {
+    "vscode": {
+        "settings": {
+            "terminal.integrated.defaultProfile.linux": "zsh",
+            "terminal.integrated.profiles.linux": {
+                "zsh": {
+                    "path": "/usr/bin/zsh"
+                }
+            }
+        },
+        "extensions": [
+            "GitHub.copilot",
+            "GitHub.copilot-chat",
+            "GitHub.vscode-github-actions",
+            "EditorConfig.EditorConfig",
+            "foxundermoon.shell-format",
+            "timonwong.shellcheck",
+            "golang.go"
+        ]
+    }
+  }
+}
