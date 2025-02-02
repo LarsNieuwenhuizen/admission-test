@@ -14,6 +14,10 @@ spec:
       labels:
         app: dummy-webhook
     spec:
+      volumes:
+        - name: webhook-certs
+          secret:
+              secretName: dummy-webhook-certs
       containers:
         - name: dummy-webhook
           image: docker.io/larsnieuwenhuizen/dummy-webhook:latest
@@ -23,6 +27,10 @@ spec:
             - "run"
           ports:
             - containerPort: 443
+          volumeMounts:
+            - mountPath: /app/certs
+              name: webhook-certs
+              readOnly: true
 
 ---
 apiVersion: v1
@@ -33,32 +41,37 @@ spec:
   selector:
     app: dummy-webhook
   ports:
-    - port: 8080
-      targetPort: 8080
+    - port: 443
+      targetPort: 443
       protocol: TCP
 
-#---
-#apiVersion: admissionregistration.k8s.io/v1
-#kind: ValidatingWebhookConfiguration
-#metadata:
-#  name: validating-webhook-configuration-dummy
-#webhooks:
-#  - admissionReviewVersions:
-#      - v1
-#      - v1beta1
-#    name: dummy-webhook.example.com
-#    rules:
-#      - operations:
-#          - CREATE
-#          - UPDATE
-#          - DELETE
-#        apiGroups:
-#          - ""
-#        resources:
-#          - pods
-#        scope: Namespaced
-#    failurePolicy: Fail
-#    clientConfig:
-#      service:
-#        name: dummy-webhook
-#        namespace: default
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  name: validating-webhook-configuration-dummy
+webhooks:
+  - admissionReviewVersions:
+      - v1
+      - v1beta1
+    name: dummy-webhook.default.svc
+    sideEffects: None
+    rules:
+      - operations:
+          - CREATE
+          - UPDATE
+          - DELETE
+        apiGroups:
+          - ""
+        resources:
+          - configmaps
+        scope: Namespaced
+        apiVersions:
+          - v1
+    failurePolicy: Fail
+    clientConfig:
+      service:
+        name: dummy-webhook
+        namespace: default
+        path: "/allow"
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURxekNDQXBPZ0F3SUJBZ0lVR1B3YUo0SGY3S2VVNk80U3N2RWcyOFZ6T1Bzd0RRWUpLb1pJaHZjTkFRRUwKQlFBd1pURUxNQWtHQTFVRUJoTUNUa3d4RURBT0JnTlZCQWdNQjFWMGNtVmphSFF4RURBT0JnTlZCQWNNQjFWMApjbVZqYUhReEl6QWhCZ05WQkFvTUdrNXBaWFYzWlc1b2RXbDZaVzRnU1ZRZ1UyOXNkWFJwYjI1ek1RMHdDd1lEClZRUUREQVJOZVVOQk1CNFhEVEkxTURJd01qRTFOVGt5TkZvWERUSTJNREl3TWpFMU5Ua3lORm93WlRFTE1Ba0cKQTFVRUJoTUNUa3d4RURBT0JnTlZCQWdNQjFWMGNtVmphSFF4RURBT0JnTlZCQWNNQjFWMGNtVmphSFF4SXpBaApCZ05WQkFvTUdrNXBaWFYzWlc1b2RXbDZaVzRnU1ZRZ1UyOXNkWFJwYjI1ek1RMHdDd1lEVlFRRERBUk5lVU5CCk1JSUJJakFOQmdrcWhraUc5dzBCQVFFRkFBT0NBUThBTUlJQkNnS0NBUUVBdi80aFhWNzNYVjluT0tQZUNyL0IKV09NOTJNTEZrZHlWMy9iYVprZ2ZtMWppcVdLVXUxWllPOURveWY4TS9PNEhLQkUrSFhxYkR6WDlRWTBLMGZLNQpQczJoMlZBdlIyZExqQ0hOa0FJOVZhbExkaGQvaHJ1eEVCeGI2TWp4QjRWRjFSSnk1MlVmSVhidkd3UHd3NHVaCk9hN3YyYmpjVjk5cXhTWkZMTW1FVU5pZEJkNHpFUXBrb29zM2RFdVVCWFJhS3Z0cTEzQUJQdEpaWm8xSEpXQ3AKR3lsYmdLVWx4VWZadzNGcEdiR2dZbDhXNjVoRjN3bnRyblJJNWtUOFMySUs2TFZRazRwZlVob2Jhc1UwcGNoNgpLaE54SGYwRG4xVkVjTlA2bWpWQ1NVN2tFY3BTQjh5eVVxdmIwTFVPVVV6d0JxN25YMGp1VENQQkxQa2Y5UjZLCmJ3SURBUUFCbzFNd1VUQWRCZ05WSFE0RUZnUVUwdU16c0I2ZExiU29uM2RSUWZiMy9QQittMFV3SHdZRFZSMGoKQkJnd0ZvQVUwdU16c0I2ZExiU29uM2RSUWZiMy9QQittMFV3RHdZRFZSMFRBUUgvQkFVd0F3RUIvekFOQmdrcQpoa2lHOXcwQkFRc0ZBQU9DQVFFQVVNcDIvZ0JMc0J6UkRWZHE3dlljcUgxRXhTSERYVWE5cXIrWnUvNzEzMkFtCkMrTllzeUVTbko2OEJoTElLYUswek9vRmNxR2pNRWRtTlhXZ1lNSDFEdTU3U1JyenVlL014OXVmVVZzdGlrcUcKVjhYaDVnQzVnUUtsTUJxTTdVaXFmMDRGVTZ1cnZSa2xIMmFZWndLTDErVFZleUxLQkFGcWlieVd3dEhIRG13KwpEKzZ3eFdyenFQb3g5RDhyejJBam5udjlBSzlCVXZkNE8xUkNRRmVtQnN2UHBvSkc4UUFtZ2dYM25zbEd1MEpRCjdGMkpUNk4rbHRsd3h4MndXUjdUSlpJMGdSUlNQOFdHODIwUkdhRzU5MnZDV3Q1ZHY0VC9sY1gyaGZxUDlUYjkKYmhtMlY2L3lnMHNMNFhETzVJSUtKT2YxTlRVYUpwdDdKQktvSUt6UVdBPT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=

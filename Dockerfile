@@ -8,7 +8,9 @@ WORKDIR /app
 COPY . /app
 
 RUN mkdir bin; \
-    go build -o bin/webhook main.go
+    go mod tidy
+
+RUN go build -o bin/webhook main.go
 
 ENTRYPOINT ["/app/bin/webhook"]
 CMD ["run"]
