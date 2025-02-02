@@ -1,7 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"github.com/LarsNieuwenhuizen/admission-test/webhook"
+	"github.com/spf13/cobra"
+)
+
+var rootCmd = &cobra.Command{
+	Use: "help",
+	Run: func(cmd *cobra.Command, args []string) {
+		cmd.Help()
+	},
+}
 
 func main() {
-	fmt.Println("Hello, World!")
+	rootCmd.AddCommand(webhook.CmdWebhook)
+	rootCmd.Execute()
 }

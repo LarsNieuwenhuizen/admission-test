@@ -1,0 +1,64 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dummy-webhook
+  labels:
+    app: dummy-webhook
+spec:
+  selector:
+   matchLabels:
+     app: dummy-webhook
+  template:
+    metadata:
+      labels:
+        app: dummy-webhook
+    spec:
+      containers:
+        - name: dummy-webhook
+          image: docker.io/larsnieuwenhuizen/dummy-webhook:latest
+          imagePullPolicy: Always
+          command:
+            - "/app/bin/webhook"
+            - "run"
+          ports:
+            - containerPort: 443
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dummy-webhook
+spec:
+  selector:
+    app: dummy-webhook
+  ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+
+#---
+#apiVersion: admissionregistration.k8s.io/v1
+#kind: ValidatingWebhookConfiguration
+#metadata:
+#  name: validating-webhook-configuration-dummy
+#webhooks:
+#  - admissionReviewVersions:
+#      - v1
+#      - v1beta1
+#    name: dummy-webhook.example.com
+#    rules:
+#      - operations:
+#          - CREATE
+#          - UPDATE
+#          - DELETE
+#        apiGroups:
+#          - ""
+#        resources:
+#          - pods
+#        scope: Namespaced
+#    failurePolicy: Fail
+#    clientConfig:
+#      service:
+#        name: dummy-webhook
+#        namespace: default
