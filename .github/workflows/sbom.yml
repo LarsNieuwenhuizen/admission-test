@@ -1,0 +1,32 @@
+name: Generate and publish SBOM
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - main
+
+jobs:
+  create-sbom:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install syft
+      run: |
+        echo "Installing syft"
+        curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
+
+    - name: Generate SBOM
+      run: |
+        echo "Generating SBOM"
+        syft larsnieuwenhuizen/dummy-webhook:latest -o spdx-json=sbom.json
+
+    - name: Publish SBOM
+      run: |
+        echo "Publishing SBOM"
+        # Publish SBOM here
+        git add sbom.json
+        git commit -m "ci(automated): Update SBOM"
+        git push origin main
