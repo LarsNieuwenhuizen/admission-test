@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:95f52f25-06a8-4d76-945f-7eee5b2c96d9",
+  "serialNumber": "urn:uuid:316be47c-3919-4e1d-97dd-3f8c83c81ded",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-02-03T10:25:59Z",
+    "timestamp": "2025-02-03T10:32:05Z",
     "tools": {
       "components": [
         {
@@ -20,7 +20,7 @@
       "bom-ref": "c433ae5cb9ba3b1a",
       "type": "container",
       "name": "larsnieuwenhuizen/dummy-webhook",
-      "version": "sha256:41cb6940d72e0d80f39484cf05162f9bd685453d00e9eee7e6bc0f996b3c6808"
+      "version": "sha256:03081d76f9c3b35560ad8c767f90d9ab985644b4bb2a6daea84310e279eda900"
     }
   },
   "components": [
@@ -225,19 +225,19 @@
       ]
     },
     {
-      "bom-ref": "pkg:apk/alpine/ca-certificates-bundle@20211220-r0?arch=aarch64&distro=alpine-3.12.12&package-id=10fa5533b4ddaa4a&upstream=ca-certificates",
+      "bom-ref": "pkg:apk/alpine/ca-certificates-bundle@20220614-r0?arch=aarch64&distro=alpine-3.12.12&package-id=118d43a8cf24d6ea&upstream=ca-certificates",
       "type": "library",
       "publisher": "Natanael Copa (ncopa@alpinelinux.org)",
       "name": "ca-certificates-bundle",
-      "version": "20211220-r0",
+      "version": "20220614-r0",
       "description": "Pre generated bundle of Mozilla certificates",
       "licenses": [
         {
           "expression": "GPL-2.0-or-later AND MPL-2.0"
         }
       ],
-      "cpe": "cpe:2.3:a:ca-certificates-bundle:ca-certificates-bundle:20211220-r0:*:*:*:*:*:*:*",
-      "purl": "pkg:apk/alpine/ca-certificates-bundle@20211220-r0?arch=aarch64&distro=alpine-3.12.12&upstream=ca-certificates",
+      "cpe": "cpe:2.3:a:ca-certificates-bundle:ca-certificates-bundle:20220614-r0:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/alpine/ca-certificates-bundle@20220614-r0?arch=aarch64&distro=alpine-3.12.12&upstream=ca-certificates",
       "properties": [
         {
           "name": "syft:package:type",
@@ -249,47 +249,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:ca-certificates-bundle:ca_certificates_bundle:20211220-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:ca-certificates-bundle:ca_certificates_bundle:20220614-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:ca_certificates_bundle:ca-certificates-bundle:20211220-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:ca_certificates_bundle:ca-certificates-bundle:20220614-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:ca_certificates_bundle:ca_certificates_bundle:20211220-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:ca_certificates_bundle:ca_certificates_bundle:20220614-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:ca-certificates:ca-certificates-bundle:20211220-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:ca-certificates:ca-certificates-bundle:20220614-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:ca-certificates:ca_certificates_bundle:20211220-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:ca-certificates:ca_certificates_bundle:20220614-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:ca_certificates:ca-certificates-bundle:20211220-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:ca_certificates:ca-certificates-bundle:20220614-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:ca_certificates:ca_certificates_bundle:20211220-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:ca_certificates:ca_certificates_bundle:20220614-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:mozilla:ca-certificates-bundle:20211220-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:mozilla:ca-certificates-bundle:20220614-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:mozilla:ca_certificates_bundle:20211220-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:mozilla:ca_certificates_bundle:20220614-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:ca:ca-certificates-bundle:20211220-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:ca:ca-certificates-bundle:20220614-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:ca:ca_certificates_bundle:20211220-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:ca:ca_certificates_bundle:20220614-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:metadata:installedSize",
@@ -859,11 +859,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl",
+      "bom-ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl",
       "type": "library",
       "publisher": "Timo Teras (timo.teras@iki.fi)",
       "name": "libcrypto1.1",
-      "version": "1.1.1n-r0",
+      "version": "1.1.1o-r0",
       "description": "Crypto library from openssl",
       "licenses": [
         {
@@ -872,8 +872,8 @@
           }
         }
       ],
-      "cpe": "cpe:2.3:a:libcrypto1.1:libcrypto1.1:1.1.1n-r0:*:*:*:*:*:*:*",
-      "purl": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&upstream=openssl",
+      "cpe": "cpe:2.3:a:libcrypto1.1:libcrypto1.1:1.1.1o-r0:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&upstream=openssl",
       "properties": [
         {
           "name": "syft:package:type",
@@ -885,15 +885,15 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:libcrypto1.1:libcrypto:1.1.1n-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:libcrypto1.1:libcrypto:1.1.1o-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:libcrypto:libcrypto1.1:1.1.1n-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:libcrypto:libcrypto1.1:1.1.1o-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:libcrypto:libcrypto:1.1.1n-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:libcrypto:libcrypto:1.1.1o-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:metadata:installedSize",
@@ -910,11 +910,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl",
+      "bom-ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl",
       "type": "library",
       "publisher": "Timo Teras (timo.teras@iki.fi)",
       "name": "libssl1.1",
-      "version": "1.1.1n-r0",
+      "version": "1.1.1o-r0",
       "description": "SSL shared libraries",
       "licenses": [
         {
@@ -923,8 +923,8 @@
           }
         }
       ],
-      "cpe": "cpe:2.3:a:libssl1.1:libssl1.1:1.1.1n-r0:*:*:*:*:*:*:*",
-      "purl": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&upstream=openssl",
+      "cpe": "cpe:2.3:a:libssl1.1:libssl1.1:1.1.1o-r0:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&upstream=openssl",
       "properties": [
         {
           "name": "syft:package:type",
@@ -936,15 +936,15 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:libssl1.1:libssl:1.1.1n-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:libssl1.1:libssl:1.1.1o-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:libssl:libssl1.1:1.1.1n-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:libssl:libssl1.1:1.1.1o-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:libssl:libssl:1.1.1n-r0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:libssl:libssl:1.1.1o-r0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:metadata:installedSize",
@@ -1345,11 +1345,11 @@
       ]
     },
     {
-      "bom-ref": "pkg:apk/alpine/zlib@1.2.12-r0?arch=aarch64&distro=alpine-3.12.12&package-id=fb1cd70fb2957792",
+      "bom-ref": "pkg:apk/alpine/zlib@1.2.12-r3?arch=aarch64&distro=alpine-3.12.12&package-id=57590f9fd97c1543",
       "type": "library",
       "publisher": "Natanael Copa (ncopa@alpinelinux.org)",
       "name": "zlib",
-      "version": "1.2.12-r0",
+      "version": "1.2.12-r3",
       "description": "A compression/decompression Library",
       "licenses": [
         {
@@ -1358,8 +1358,8 @@
           }
         }
       ],
-      "cpe": "cpe:2.3:a:zlib:zlib:1.2.12-r0:*:*:*:*:*:*:*",
-      "purl": "pkg:apk/alpine/zlib@1.2.12-r0?arch=aarch64&distro=alpine-3.12.12",
+      "cpe": "cpe:2.3:a:zlib:zlib:1.2.12-r3:*:*:*:*:*:*:*",
+      "purl": "pkg:apk/alpine/zlib@1.2.12-r3?arch=aarch64&distro=alpine-3.12.12",
       "properties": [
         {
           "name": "syft:package:type",
@@ -1421,10 +1421,10 @@
     {
       "ref": "pkg:apk/alpine/apk-tools@2.10.8-r1?arch=aarch64&distro=alpine-3.12.12&package-id=fce04c465893236e",
       "dependsOn": [
-        "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl",
-        "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl",
+        "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl",
+        "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl",
         "pkg:apk/alpine/musl@1.1.24-r10?arch=aarch64&distro=alpine-3.12.12&package-id=f11fde5bcd91e223",
-        "pkg:apk/alpine/zlib@1.2.12-r0?arch=aarch64&distro=alpine-3.12.12&package-id=fb1cd70fb2957792"
+        "pkg:apk/alpine/zlib@1.2.12-r3?arch=aarch64&distro=alpine-3.12.12&package-id=57590f9fd97c1543"
       ]
     },
     {
@@ -1440,24 +1440,24 @@
       ]
     },
     {
-      "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl",
+      "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl",
       "dependsOn": [
         "pkg:apk/alpine/musl@1.1.24-r10?arch=aarch64&distro=alpine-3.12.12&package-id=f11fde5bcd91e223"
       ]
     },
     {
-      "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl",
+      "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl",
       "dependsOn": [
-        "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl",
+        "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl",
         "pkg:apk/alpine/musl@1.1.24-r10?arch=aarch64&distro=alpine-3.12.12&package-id=f11fde5bcd91e223"
       ]
     },
     {
       "ref": "pkg:apk/alpine/libtls-standalone@2.9.1-r1?arch=aarch64&distro=alpine-3.12.12&package-id=4efc9d660f6e86bf",
       "dependsOn": [
-        "pkg:apk/alpine/ca-certificates-bundle@20211220-r0?arch=aarch64&distro=alpine-3.12.12&package-id=10fa5533b4ddaa4a&upstream=ca-certificates",
-        "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl",
-        "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl",
+        "pkg:apk/alpine/ca-certificates-bundle@20220614-r0?arch=aarch64&distro=alpine-3.12.12&package-id=118d43a8cf24d6ea&upstream=ca-certificates",
+        "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl",
+        "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl",
         "pkg:apk/alpine/musl@1.1.24-r10?arch=aarch64&distro=alpine-3.12.12&package-id=f11fde5bcd91e223"
       ]
     },
@@ -1482,7 +1482,7 @@
       ]
     },
     {
-      "ref": "pkg:apk/alpine/zlib@1.2.12-r0?arch=aarch64&distro=alpine-3.12.12&package-id=fb1cd70fb2957792",
+      "ref": "pkg:apk/alpine/zlib@1.2.12-r3?arch=aarch64&distro=alpine-3.12.12&package-id=57590f9fd97c1543",
       "dependsOn": [
         "pkg:apk/alpine/musl@1.1.24-r10?arch=aarch64&distro=alpine-3.12.12&package-id=f11fde5bcd91e223"
       ]
@@ -1516,7 +1516,7 @@
   ],
   "vulnerabilities": [
     {
-      "bom-ref": "urn:uuid:796d2c5e-74e2-4dd1-815a-33c5a23b4423",
+      "bom-ref": "urn:uuid:ac032e18-1109-4d5f-a872-6f1a740c3dd3",
       "id": "CVE-2022-2068",
       "source": {
         "name": "nvd-cpe",
@@ -1604,12 +1604,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:80f90e2d-bdcb-4057-89ce-8e5787de205c",
+      "bom-ref": "urn:uuid:e25bffc0-7dce-442e-a6d7-119c3b6a01c8",
       "id": "CVE-2022-2068",
       "source": {
         "name": "nvd-cpe",
@@ -1697,12 +1697,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:90b6daab-6a20-4aaf-a513-3a1ce80a2100",
+      "bom-ref": "urn:uuid:96a1fe72-5c04-453b-8ed4-f1bc606cdfde",
       "id": "CVE-2022-2097",
       "source": {
         "name": "nvd-cpe",
@@ -1814,12 +1814,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:0a469e6c-ba38-41bd-99f3-9ddb83c374c4",
+      "bom-ref": "urn:uuid:eb473e88-e2c7-42cd-9495-89a2f7f86a98",
       "id": "CVE-2022-2097",
       "source": {
         "name": "nvd-cpe",
@@ -1931,44 +1931,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:cfeaa94f-475a-465d-8ffd-398cd5c86235",
-      "id": "CVE-2022-37434",
-      "source": {
-        "name": "alpine-distro-alpine-3.12",
-        "url": "https://www.cve.org/CVERecord?id=CVE-2022-37434"
-      },
-      "references": [
-        {
-          "id": "CVE-2022-37434",
-          "source": {
-            "name": "alpine-distro-alpine-3.12",
-            "url": "https://www.cve.org/CVERecord?id=CVE-2022-37434"
-          }
-        }
-      ],
-      "ratings": [
-        {
-          "severity": "critical"
-        }
-      ],
-      "advisories": [
-        {
-          "url": "https://www.cve.org/CVERecord?id=CVE-2022-37434"
-        }
-      ],
-      "affects": [
-        {
-          "ref": "pkg:apk/alpine/zlib@1.2.12-r0?arch=aarch64&distro=alpine-3.12.12&package-id=fb1cd70fb2957792"
-        }
-      ]
-    },
-    {
-      "bom-ref": "urn:uuid:2d93f9aa-1ab6-4bf7-9b47-94cfddcedb3f",
+      "bom-ref": "urn:uuid:72f84812-dff1-4eb6-82dd-1b5f18efb531",
       "id": "CVE-2022-4304",
       "source": {
         "name": "nvd-cpe",
@@ -2008,12 +1976,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:79fa8653-c467-4432-952e-73e0f9bedf52",
+      "bom-ref": "urn:uuid:bef0e42b-c08b-42dd-9b82-e61e6b7d246e",
       "id": "CVE-2022-4304",
       "source": {
         "name": "nvd-cpe",
@@ -2053,12 +2021,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:071a16ac-5df1-49f9-8b20-40cd066a8477",
+      "bom-ref": "urn:uuid:5b0f3b32-2e05-46f0-908b-5cd0d7ae93e4",
       "id": "CVE-2022-4450",
       "source": {
         "name": "nvd-cpe",
@@ -2110,12 +2078,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:f6121ca6-8b62-4bf3-8e7a-ee43ebd61804",
+      "bom-ref": "urn:uuid:33c8a20c-b4d6-4f8c-b7b8-f4f26cc28988",
       "id": "CVE-2022-4450",
       "source": {
         "name": "nvd-cpe",
@@ -2167,12 +2135,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:8d373ed9-fae7-4044-beb4-0864f4607431",
+      "bom-ref": "urn:uuid:353ef344-139a-4b22-9e33-488ff47c23a3",
       "id": "CVE-2022-48174",
       "source": {
         "name": "nvd-cpe",
@@ -2214,7 +2182,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:0e1d3974-a863-4c42-a3ba-3ee943c1f8bc",
+      "bom-ref": "urn:uuid:1c2ca40f-46fb-445c-8a02-d9ec0537f422",
       "id": "CVE-2022-48174",
       "source": {
         "name": "nvd-cpe",
@@ -2256,7 +2224,7 @@
       ]
     },
     {
-      "bom-ref": "urn:uuid:43c4d81a-5587-4221-b77e-03b70ebb9731",
+      "bom-ref": "urn:uuid:3628bc5f-bf42-4977-a149-43b825ed1e9a",
       "id": "CVE-2023-0215",
       "source": {
         "name": "nvd-cpe",
@@ -2332,12 +2300,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:d9e73fe3-f190-40a1-89db-d345be3db414",
+      "bom-ref": "urn:uuid:45f2321a-be0c-4954-95aa-088707fc5043",
       "id": "CVE-2023-0215",
       "source": {
         "name": "nvd-cpe",
@@ -2413,12 +2381,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:f8a1601f-a5f1-4aa8-aed3-b3c8f4dce108",
+      "bom-ref": "urn:uuid:43004856-290b-4927-a200-3213e1295a94",
       "id": "CVE-2023-0286",
       "source": {
         "name": "nvd-cpe",
@@ -2488,12 +2456,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:c508db6c-aabe-4962-978c-861381c1656b",
+      "bom-ref": "urn:uuid:8d03981e-63e5-4abe-81ef-3b6398d36319",
       "id": "CVE-2023-0286",
       "source": {
         "name": "nvd-cpe",
@@ -2563,12 +2531,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:255991e1-24f8-4a04-a672-4e078676f644",
+      "bom-ref": "urn:uuid:7125404d-03eb-40f7-8fc6-f60e7d05f5c1",
       "id": "CVE-2023-0464",
       "source": {
         "name": "nvd-cpe",
@@ -2659,12 +2627,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:9da19cfd-6447-45ee-a2da-dd4399b35080",
+      "bom-ref": "urn:uuid:65cf3771-7f3e-4347-80e0-b9cd840f0e16",
       "id": "CVE-2023-0464",
       "source": {
         "name": "nvd-cpe",
@@ -2755,12 +2723,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:eb253a96-42ef-41c0-9e46-af9421fa5307",
+      "bom-ref": "urn:uuid:1d340abc-272d-4cf4-a39e-da45fd87563c",
       "id": "CVE-2023-0465",
       "source": {
         "name": "nvd-cpe",
@@ -2842,12 +2810,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:c9cb2e93-0f8a-49d2-b792-1adb6c50ce01",
+      "bom-ref": "urn:uuid:3fa4e9e8-f53e-4fab-89bb-5aa287d97411",
       "id": "CVE-2023-0465",
       "source": {
         "name": "nvd-cpe",
@@ -2929,12 +2897,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:da704962-740b-4d80-8907-5b4b7449dca0",
+      "bom-ref": "urn:uuid:2c973783-7bf3-4feb-b75b-cd414a81e554",
       "id": "CVE-2023-0466",
       "source": {
         "name": "nvd-cpe",
@@ -3022,12 +2990,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:0f64807f-dde5-4a77-bf98-bcad4120cc53",
+      "bom-ref": "urn:uuid:c363a062-8724-4128-8031-ab22815f4115",
       "id": "CVE-2023-0466",
       "source": {
         "name": "nvd-cpe",
@@ -3115,12 +3083,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:4f65382e-3c19-472a-91ed-e2d4f1ce3283",
+      "bom-ref": "urn:uuid:71aa93c8-14da-4261-99f0-78019759b4d8",
       "id": "CVE-2023-2650",
       "source": {
         "name": "nvd-cpe",
@@ -3220,12 +3188,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:06c298de-4c38-47ed-bc75-63d061560637",
+      "bom-ref": "urn:uuid:6ee8305f-164e-456b-886d-2f3e1e3e4a10",
       "id": "CVE-2023-2650",
       "source": {
         "name": "nvd-cpe",
@@ -3325,12 +3293,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:72e6890a-f556-4f11-ab21-6713f32d2e9c",
+      "bom-ref": "urn:uuid:b2d0ca4f-be10-4106-beee-74e8cfaf22d1",
       "id": "CVE-2023-3446",
       "source": {
         "name": "nvd-cpe",
@@ -3412,12 +3380,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:274f75ba-b5dd-447e-a9d6-66dae1d37bdd",
+      "bom-ref": "urn:uuid:1aae041a-9b74-4775-99fd-325951172ae8",
       "id": "CVE-2023-3446",
       "source": {
         "name": "nvd-cpe",
@@ -3499,12 +3467,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:82b785bd-526e-4d84-aea3-cb32cc36bb90",
+      "bom-ref": "urn:uuid:71a32593-654e-4382-aeb6-b7fcb4bea044",
       "id": "CVE-2023-3817",
       "source": {
         "name": "nvd-cpe",
@@ -3592,12 +3560,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:b1a61b15-0e0d-47c0-8e9e-313ca8270f40",
+      "bom-ref": "urn:uuid:2b6bddc9-ea2c-447b-8a05-fd38aeb9ab95",
       "id": "CVE-2023-3817",
       "source": {
         "name": "nvd-cpe",
@@ -3685,12 +3653,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:dd89796e-d46f-4e65-ab37-71be03e25946",
+      "bom-ref": "urn:uuid:acd784bc-335e-4ad5-83c5-6ced81c81854",
       "id": "CVE-2023-45853",
       "source": {
         "name": "nvd-cpe",
@@ -3790,12 +3758,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/zlib@1.2.12-r0?arch=aarch64&distro=alpine-3.12.12&package-id=fb1cd70fb2957792"
+          "ref": "pkg:apk/alpine/zlib@1.2.12-r3?arch=aarch64&distro=alpine-3.12.12&package-id=57590f9fd97c1543"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:769578b2-4d4e-45ba-bdf2-188b1fc037f7",
+      "bom-ref": "urn:uuid:54892086-a465-48c5-96f8-9f7f95efcb21",
       "id": "CVE-2023-4807",
       "source": {
         "name": "nvd-cpe",
@@ -3850,12 +3818,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:d50977f4-42ad-41cf-8323-79426132197b",
+      "bom-ref": "urn:uuid:f8713790-c730-4ebb-9521-6bcc6980f463",
       "id": "CVE-2023-4807",
       "source": {
         "name": "nvd-cpe",
@@ -3910,12 +3878,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:da1587f1-d9b2-4884-babe-53954ab14ebb",
+      "bom-ref": "urn:uuid:69681d6b-48bb-4b7a-954d-b18d08ccb5b7",
       "id": "CVE-2023-5678",
       "source": {
         "name": "nvd-cpe",
@@ -3979,12 +3947,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:0dabc862-0248-4735-aad0-222707095038",
+      "bom-ref": "urn:uuid:49270ae9-938c-4a54-ac82-54b2f0fc85dc",
       "id": "CVE-2023-5678",
       "source": {
         "name": "nvd-cpe",
@@ -4048,12 +4016,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:928280f8-da0a-487f-add8-f6539125464d",
+      "bom-ref": "urn:uuid:461388ba-616a-4a68-8e4e-aa2584a919ae",
       "id": "CVE-2024-0727",
       "source": {
         "name": "nvd-cpe",
@@ -4123,12 +4091,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:4c1d51e7-5371-434f-841b-bb1859e691fe",
+      "bom-ref": "urn:uuid:e8677bc3-b090-4dce-83f7-94b9899b3f26",
       "id": "CVE-2024-0727",
       "source": {
         "name": "nvd-cpe",
@@ -4198,12 +4166,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:c4291659-5744-44e8-b911-16f05e28bc32",
+      "bom-ref": "urn:uuid:39c83917-e64b-484f-a1e4-b99acee961ed",
       "id": "CVE-2024-13176",
       "source": {
         "name": "nvd-cpe",
@@ -4261,12 +4229,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:89d2eac5-8c2b-4435-a609-bc0b323864ef",
+      "bom-ref": "urn:uuid:c3a7b005-35ed-46cd-b7a4-60bd78eef1b3",
       "id": "CVE-2024-13176",
       "source": {
         "name": "nvd-cpe",
@@ -4324,12 +4292,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:21c9fd56-f3f8-48e5-9e61-5d50c5f23e8a",
+      "bom-ref": "urn:uuid:d3e5185c-d84c-4313-b84e-8ba28f280291",
       "id": "CVE-2024-2511",
       "source": {
         "name": "nvd-cpe",
@@ -4390,12 +4358,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:ec8be551-c907-4767-82df-97b448658533",
+      "bom-ref": "urn:uuid:5f06d18a-5059-4d05-a078-e2f40048c430",
       "id": "CVE-2024-2511",
       "source": {
         "name": "nvd-cpe",
@@ -4456,12 +4424,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:f8860ccb-2e0b-41c0-893e-4052445afaec",
+      "bom-ref": "urn:uuid:e4136e17-d822-4cd4-be43-96793c34d298",
       "id": "CVE-2024-4741",
       "source": {
         "name": "nvd-cpe",
@@ -4507,12 +4475,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:98a5ba64-62cd-4147-95bf-c556029516aa",
+      "bom-ref": "urn:uuid:70f4d338-88be-48da-8ffb-c7f48a7621e5",
       "id": "CVE-2024-4741",
       "source": {
         "name": "nvd-cpe",
@@ -4558,12 +4526,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:d6cbbb6b-f078-4a07-8f48-c175e9363289",
+      "bom-ref": "urn:uuid:5577b13a-ed62-4555-8af6-a05401b4c931",
       "id": "CVE-2024-5535",
       "source": {
         "name": "nvd-cpe",
@@ -4654,12 +4622,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:a8d22c56-30f8-4856-befb-43e2034d26fc",
+      "bom-ref": "urn:uuid:1150cc39-fad2-4dd1-8315-8356d2a103ff",
       "id": "CVE-2024-5535",
       "source": {
         "name": "nvd-cpe",
@@ -4750,12 +4718,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:923dc6d9-9fc0-4292-8a9b-a1135223761b",
+      "bom-ref": "urn:uuid:0dca4a82-bdf4-4def-933e-46da1f827fc7",
       "id": "CVE-2024-9143",
       "source": {
         "name": "nvd-cpe",
@@ -4816,12 +4784,12 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=5db823fc696d68f3&upstream=openssl"
+          "ref": "pkg:apk/alpine/libcrypto1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=3c951d8eb1c9d91d&upstream=openssl"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:829eda66-22df-476f-9ed0-7b1aa4e25c45",
+      "bom-ref": "urn:uuid:208f8091-78db-45a3-b0b6-0e58594f596a",
       "id": "CVE-2024-9143",
       "source": {
         "name": "nvd-cpe",
@@ -4882,7 +4850,7 @@
       ],
       "affects": [
         {
-          "ref": "pkg:apk/alpine/libssl1.1@1.1.1n-r0?arch=aarch64&distro=alpine-3.12.12&package-id=b419cc7b611b7876&upstream=openssl"
+          "ref": "pkg:apk/alpine/libssl1.1@1.1.1o-r0?arch=aarch64&distro=alpine-3.12.12&package-id=a414f41ecd597324&upstream=openssl"
         }
       ]
     }
