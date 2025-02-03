@@ -27,6 +27,8 @@ jobs:
       run: |
         echo "Publishing SBOM"
         # Publish SBOM here
+        git config --global user.email "lars.nieuwenhuizen@me.com"
+        git config --global user.name "Lars Nieuwenhuizen"
         git add sbom.json
         git commit -m "ci(automated): Update SBOM"
         git push origin main
