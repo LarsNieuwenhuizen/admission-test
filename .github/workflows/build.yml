@@ -42,7 +42,7 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         platforms: linux/amd64,linux/arm64
-        file: ./docker/Dockerfile
+        file: Dockerfile
         push: true
         tags: larsnieuwenhuizen/dummy-webhook:latest
         cache-from: type=local,src=/tmp/.buildx-cache-app  # Reuse cached layers from previous builds.
