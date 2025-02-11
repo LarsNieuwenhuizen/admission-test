@@ -1,4 +1,4 @@
-FROM golang:1.23-alpine as builder
+FROM golang:1.23-alpine AS builder
 LABEL authors="Lars Nieuwenhuizen"
 
 RUN mkdir /app
@@ -12,7 +12,7 @@ RUN mkdir bin; \
 
 RUN go build -o bin/webhook main.go
 
-FROM alpine:3.12 as result
+FROM alpine:3.12 AS result
 LABEL authors="Lars Nieuwenhuizen"
 
 COPY --from=builder /app/bin/webhook /app/bin/webhook
