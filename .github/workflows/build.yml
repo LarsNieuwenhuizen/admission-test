@@ -79,6 +79,7 @@ jobs:
           image-ref: 'larsnieuwenhuizen/dummy-webhook:latest'
           format: 'sarif'
           output: 'trivy-results.sarif'
+          severity: 'CRITICAL,HIGH'
         env:
           TRIVY_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           TRIVY_PASSWORD: ${{ secrets.DOCKER_TOKEN }}
