@@ -7,10 +7,7 @@ on:
     - main
 
 permissions:
-  contents: write
-  packages: write
-  attestations: write
-  security-events: write
+  contents: read
 
 env:
   DOCKER_BUILDKIT: 1
@@ -31,7 +28,7 @@ jobs:
     - name: Login to docker registry
       run: echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
 
-    - name: APP::Cache Docker layers
+    - name: Cache Docker layers
       uses: actions/cache@v4
       with:
         path: /tmp/.buildx-cache-app
@@ -39,7 +36,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-buildx-app-
 
-    - name: APP::Build Docker image
+    - name: Build Docker image
       uses: docker/build-push-action@v6
       with:
         #platforms: linux/amd64,linux/arm64
@@ -49,7 +46,7 @@ jobs:
         cache-from: type=local,src=/tmp/.buildx-cache-app  # Reuse cached layers from previous builds.
         cache-to: type=local,dest=/tmp/.buildx-cache-app-new,mode=max  # Save new cache layers after the build.
 
-    - name: APP::Move cache
+    - name: Move cache
       run: |
         rm -rf /tmp/.buildx-cache-app
         mv /tmp/.buildx-cache-app-new /tmp/.buildx-cache-app
@@ -77,17 +74,17 @@ jobs:
           TRIVY_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           TRIVY_PASSWORD: ${{ secrets.DOCKER_TOKEN }}
 
-      - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@0.28.0
-        with:
-          image-ref: 'larsnieuwenhuizen/dummy-webhook:latest'
-          format: 'sarif'
-          output: 'trivy-results.sarif'
-        env:
-          TRIVY_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          TRIVY_PASSWORD: ${{ secrets.DOCKER_TOKEN }}
-
-      - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: 'trivy-results.sarif'
+#      - name: Run Trivy vulnerability scanner
+#        uses: aquasecurity/trivy-action@0.28.0
+#        with:
+#          image-ref: 'larsnieuwenhuizen/dummy-webhook:latest'
+#          format: 'sarif'
+#          output: 'trivy-results.sarif'
+#        env:
+#          TRIVY_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+#          TRIVY_PASSWORD: ${{ secrets.DOCKER_TOKEN }}
+#
+#      - name: Upload Trivy scan results to GitHub Security tab
+#        uses: github/codeql-action/upload-sarif@v3
+#        with:
+#          sarif_file: 'trivy-results.sarif'
