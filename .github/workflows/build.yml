@@ -8,6 +8,8 @@ on:
 
 permissions:
   contents: write
+  packages: write
+  attestations: write
 
 env:
   DOCKER_BUILDKIT: 1
@@ -28,9 +30,22 @@ jobs:
     - name: Login to docker registry
       run: echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
 
+    - name: Cache Docker layers
+      uses: actions/cache@v4
+      with:
+        path: /tmp/.buildx-cache-app
+        key: ${{ runner.os }}-buildx-app-${{ steps.git_sha.outputs.gitsha }} # Unique key based on OS and commit SHA.
+        restore-keys: |
+          ${{ runner.os }}-buildx-app-
+
     - name: Build and push
       run: |
         docker buildx build --platform linux/amd64,linux/arm64 -t larsnieuwenhuizen/dummy-webhook:latest --push .
+
+    - name: Move cache
+      run: |
+        rm -rf /tmp/.buildx-cache-app
+        mv /tmp/.buildx-cache-app-new /tmp/.buildx-cache-app
 
   scan:
     runs-on: ubuntu-latest
@@ -50,3 +65,18 @@ jobs:
         env:
           TRIVY_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           TRIVY_PASSWORD: ${{ secrets.DOCKER_TOKEN }}
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: 'larsnieuwenhuizen/dummy-webhook:latest'
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+        env:
+          TRIVY_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          TRIVY_PASSWORD: ${{ secrets.DOCKER_TOKEN }}
+
+      - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: 'trivy-results.sarif'
