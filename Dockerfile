@@ -12,7 +12,7 @@ RUN mkdir bin; \
 
 RUN go build -o bin/webhook main.go
 
-FROM alpine:3.12 AS result
+FROM alpine:3.21 AS result
 LABEL authors="Lars Nieuwenhuizen"
 
 COPY --from=builder /app/bin/webhook /app/bin/webhook
