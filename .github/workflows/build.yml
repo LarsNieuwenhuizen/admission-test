@@ -10,6 +10,7 @@ permissions:
   contents: write
   packages: write
   attestations: write
+  security-events: write
 
 env:
   DOCKER_BUILDKIT: 1
