@@ -22,15 +22,15 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Set up QEMU
-      uses: docker/setup-qemu-action@v2
+      uses: docker/setup-qemu-action@v3
 
     - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v2
+      uses: docker/setup-buildx-action@v3
 
     - name: Login to docker registry
       run: echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
 
-    - name: Cache Docker layers
+    - name: APP::Cache Docker layers
       uses: actions/cache@v4
       with:
         path: /tmp/.buildx-cache-app
@@ -38,11 +38,17 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-buildx-app-
 
-    - name: Build and push
-      run: |
-        docker buildx build --platform linux/amd64,linux/arm64 -t larsnieuwenhuizen/dummy-webhook:latest --push .
+    - name: APP::Build Docker image
+      uses: docker/build-push-action@v6
+      with:
+        platforms: linux/amd64,linux/arm64
+        file: ./docker/Dockerfile
+        push: true
+        tags: larsnieuwenhuizen/dummy-webhook:latest
+        cache-from: type=local,src=/tmp/.buildx-cache-app  # Reuse cached layers from previous builds.
+        cache-to: type=local,dest=/tmp/.buildx-cache-app-new,mode=max  # Save new cache layers after the build.
 
-    - name: Move cache
+    - name: APP::Move cache
       run: |
         rm -rf /tmp/.buildx-cache-app
         mv /tmp/.buildx-cache-app-new /tmp/.buildx-cache-app
