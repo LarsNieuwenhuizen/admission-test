@@ -69,6 +69,7 @@ jobs:
           output: 'dependency-results.sbom.json'
           image-ref: 'larsnieuwenhuizen/dummy-webhook:latest'
           github-pat: ${{ secrets.GITHUB_TOKEN }}
+          severity: 'CRITICAL,HIGH'
         env:
           TRIVY_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           TRIVY_PASSWORD: ${{ secrets.DOCKER_TOKEN }}
